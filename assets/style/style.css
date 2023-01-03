@@ -14,7 +14,8 @@ header div {
   background-color: rgb(255, 59, 0);
 }
 
-div.img-topo {
+section.img-topo {
+  color: white;
   background-color: rgb(255, 59, 0);
   height: 1200px;
   border-bottom-left-radius: 50px;
@@ -27,10 +28,6 @@ div.img-topo > p {
   margin: auto;
   width: 100vw;
   height: 1000px;
-}
-
-section {
-  background-color: white;
 }
 
 .btn-saiba-mais {
