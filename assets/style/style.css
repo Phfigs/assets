@@ -1,5 +1,20 @@
 @charset "UTF-8";
 
+@font-face {
+  font-family: "AmsiProNarw-Ultra";
+  src: url(../fontes/AmsiProNarw/AmsiProNarw-Ultra.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "AmsiProNarw-Regular";
+  src: url(../fontes/AmsiProNarw/AmsiProNarw-Regular.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "AmsiProUltra";
+  src: url(../fontes/AmsiPro/AmsiPro-Ultra.otf) format("opentype");
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -14,20 +29,21 @@ header div {
   background-color: rgb(255, 59, 0);
 }
 
+main {
+  height: 100%;
+  width: 800px;
+  margin: auto;
+  background-color: white;
+}
+
 section.img-topo {
   color: white;
-  background-color: rgb(255, 59, 0);
-  height: 1200px;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
 }
 
-div.img-topo > p {
-  background-image: url(imagens/fundo_topo.png);
-  display: block;
-  margin: auto;
-  width: 100vw;
-  height: 1000px;
+section.img-topo > p {
+  font-family: "AmsiProNarw-Ultra";
 }
 
 .btn-saiba-mais {
@@ -44,4 +60,64 @@ img.automarax {
   height: 400px;
   display: block;
   margin: auto;
+}
+
+h1 {
+  color: rgb(107, 99, 72);
+  font-family: "AmsiProNarw-Ultra";
+  text-align: center;
+  font-size: 3em;
+}
+
+h2 {
+  color: rgb(63, 63, 65);
+  font-family: "AmsiProNarw-Ultra";
+  text-align: center;
+}
+
+p#paragrafo-centro {
+  color: rgb(63, 63, 65);
+  font-family: "AmsiProNarw-Regular";
+  text-align: center;
+  font-size: 1.7em;
+  padding: 20px;
+}
+
+p#paragrafo-centro > span {
+  color: rgb(107, 99, 72);
+}
+
+.imagem-icone {
+  width: 100px;
+  height: 100px;
+  padding: 20px 0px 10px 0px;
+}
+
+.icone {
+  display: inline-block;
+  width: 160px;
+  height: 160px;
+}
+
+.icone p {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+#icones {
+  margin: auto;
+  text-align: center;
+}
+
+footer {
+  background-color: rgb(0, 127, 44);
+}
+
+footer > p {
+  margin: auto;
+  padding: 10px 0px 30px 0px;
+  width: 790px;
+  text-align: center;
+  color: white;
+  font-size: 0.7em;
 }
