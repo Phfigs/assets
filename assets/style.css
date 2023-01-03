@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-color: rgb(233, 226, 216);
+}
+
+header div {
+  width: 100%;
+  background-color: rgb(255, 59, 0);
+}
+
+div.img-topo {
+  background-color: rgb(255, 59, 0);
+  height: 1200px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+div.img-topo > p {
+  background-image: url(imagens/fundo_topo.png);
+  display: block;
+  margin: auto;
+  width: 100vw;
+  height: 1000px;
+}
+
+section {
+  background-color: white;
+}
+
+.btn-saiba-mais {
+  display: block;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 3px 20px;
+}
+
+img.automarax {
+  width: 400px;
+  height: 400px;
+  display: block;
+  margin: auto;
+}
