@@ -11,65 +11,93 @@
 }
 
 @font-face {
-  font-family: "AmsiProUltra";
+  font-family: "AmsiPro-Ultra";
   src: url(../fontes/AmsiPro/AmsiPro-Ultra.otf) format("opentype");
 }
 
+@font-face {
+  font-family: "AmsiProCond-SemiBold";
+  src: url(../fontes/AmsiPro/AmsiPro-SemiBoldCondensed.otf);
+}
 * {
   padding: 0px;
   margin: 0px;
+}
+
+#fundo-cabecalho {
+  background-color: rgb(255, 59, 0);
+  position: relative;
+  height: 50px;
+}
+
+#cabecalho {
+  height: 50px;
+  position: absolute;
+  left: 25%;
 }
 
 body {
   background-color: rgb(233, 226, 216);
 }
 
-header div {
+.imgTopo {
   width: 100%;
-  background-color: rgb(255, 59, 0);
+}
+
+.conteudoTopo {
+  font-family: "AmsiProNarw-Ultra";
+  color: white;
+  font-size: 3.2em;
+  line-height: 1.2em;
+  position: absolute;
+  left: 250px;
+  top: 250px;
 }
 
 main {
   height: 100%;
-  width: 800px;
+  max-width: 800px;
+  min-width: 250px;
   margin: auto;
+  margin-top: -100px;
+  padding-top: 200px;
+  padding-bottom: 30px;
   background-color: white;
 }
 
-section.img-topo {
-  color: white;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
-}
-
-section.img-topo > p {
-  font-family: "AmsiProNarw-Ultra";
-}
-
 .btn-saiba-mais {
+  font-family: "AmsiProNarw-Ultra";
+  font-size: 0.4em;
   display: block;
-  background-color: green;
+  background-color: rgb(20, 135, 62);
   color: white;
   border: none;
-  border-radius: 10px;
-  padding: 3px 20px;
+  border-radius: 40px;
+  padding: 3px 40px;
+  margin-top: 10px;
 }
 
-img.automarax {
-  width: 400px;
-  height: 400px;
-  display: block;
-  margin: auto;
+.automarax {
+  position: absolute;
+  bottom: -500px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  box-shadow: 4px 3px 15px rgba(0, 0, 0, 0.479);
 }
 
-h1 {
+#coberturas-abrang > h1 {
   color: rgb(107, 99, 72);
   font-family: "AmsiProNarw-Ultra";
   text-align: center;
   font-size: 3em;
 }
 
-h2 {
+#coberturas-abrang > h2 {
   color: rgb(63, 63, 65);
   font-family: "AmsiProNarw-Ultra";
   text-align: center;
@@ -87,37 +115,334 @@ p#paragrafo-centro > span {
   color: rgb(107, 99, 72);
 }
 
+#icones {
+  padding-bottom: 30px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+}
+
 .imagem-icone {
-  width: 100px;
-  height: 100px;
+  width: 160px;
+  height: 160px;
   padding: 20px 0px 10px 0px;
 }
 
 .icone {
   display: inline-block;
-  width: 160px;
-  height: 160px;
+  width: 25%;
 }
 
 .icone p {
   text-align: center;
-  padding-bottom: 10px;
+  font-family: "AmsiProCond-SemiBold";
+  color: rgb(107, 99, 72);
 }
 
-#icones {
+@media only screen and (max-width: 600px) {
+  .imagem-icone {
+    width: 150px;
+    height: 150px;
+    padding: 20px 0px 10px 0px;
+  }
+
+  .icone p {
+    text-align: center;
+    font-size: 1em;
+  }
+
+  .icone {
+    width: 50%;
+  }
+}
+
+section.especial {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: rgb(201, 59, 8);
+  border-radius: 30px;
+  padding: 10px;
+  margin: 10px 10px 0px 10px;
+}
+
+.div-especial-img {
+  width: 40%;
+}
+
+.div-especial-texto {
+  width: 60%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.div-especial-texto h1 {
+  text-align: justify;
+  color: rgb(255, 204, 0);
+  font-family: "AmsiProNarw-Ultra";
+  font-size: 3.2em;
+  padding-top: 20px;
+}
+
+.div-especial-texto > p {
+  color: white;
+  font-family: "AmsiProNarw-Ultra";
+  font-size: 1.6em;
+  text-align: justify;
+  height: 50%;
+}
+
+.img-especial {
+  width: 250px;
+  height: 250px;
+  margin: 50px 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  section.especial {
+    display: flex;
+    flex-flow: column wrap;
+  }
+  section.especial {
+    padding: 15px;
+  }
+
+  .img-especial {
+    max-width: 150px;
+    max-height: 150px;
+    margin: auto;
+  }
+
+  .div-especial-img {
+    margin: auto;
+  }
+
+  .div-especial-texto {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .div-especial-texto > p {
+    font-size: 1.2em;
+    margin: auto;
+    text-align: center;
+  }
+
+  .div-especial-texto > h1 {
+    font-size: 2.8em;
+    margin: auto;
+    text-align: center;
+  }
+}
+
+aside {
+  background-color: rgb(51, 51, 51);
+}
+
+#bloco-assistencia {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 800px;
   margin: auto;
+  padding: 40px 0px;
+}
+
+div#texto-assistencia {
+  max-width: 50%;
+}
+
+div#texto-assistencia > h1 {
+  text-align: justify;
+  color: rgb(255, 204, 0);
+  font-family: "AmsiProNarw-Ultra";
+  font-size: 3.2em;
+}
+
+div#texto-assistencia > p {
+  color: white;
+  font-family: "AmsiProNarw-Ultra";
+  font-size: 1.6em;
+  text-align: justify;
+}
+
+div#img-carrossel {
+  width: 50%;
+}
+
+img.carrossel {
+  width: 250px;
+  height: 250px;
+  display: block;
+  margin: auto;
+}
+
+.borda {
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  aside {
+    min-width: 350px;
+    max-width: 800px;
+  }
+  #bloco-assistencia {
+    min-width: 350px;
+    display: flex;
+    flex-flow: column wrap;
+    width: 800px;
+    margin: auto;
+  }
+
+  div#texto-assistencia {
+    margin: auto;
+  }
+
+  div#texto-assistencia > h1 {
+    width: 300px;
+    text-align: center;
+  }
+
+  div#texto-assistencia > p {
+    font-size: 1.3em;
+    width: 300px;
+    text-align: center;
+  }
+  .borda {
+    width: 100%;
+  }
+  #img-carrossel {
+    margin: auto;
+  }
+}
+
+section#form {
+  background-color: rgb(195, 186, 154);
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 800px;
+  min-width: 350px;
+  margin: auto;
+  padding: 20px;
+}
+
+div#texto-periferico {
+  width: 50%;
+  margin: auto;
+}
+
+div#texto-periferico > h1 {
+  color: rgb(51, 51, 51);
+  font-family: "AmsiProNarw-Ultra";
+  font-size: 3em;
+}
+
+div#texto-periferico > h2 {
+  color: white;
+  font-family: "AmsiProNarw-Ultra";
+  font-size: 1.5em;
+}
+
+form#formulario {
+  width: 40%;
+  border: 1px solid rgb(255, 59, 0);
+  border-radius: 10px;
+  background-color: rgb(246, 243, 234);
+  padding: 10px;
+}
+
+form#formulario > h1 {
+  font-family: "AmsiProNarw-Ultra";
+  font-size: 1.5em;
+  color: rgb(255, 59, 0);
   text-align: center;
 }
 
+input.campo {
+  width: 100%;
+  height: 20px;
+  margin-bottom: 10px;
+}
+
+form#formulario label {
+  color: black;
+  font-size: 0.7em;
+  font-family: "AmsiProNarw-Regular";
+}
+
+#msg-checkbox {
+  color: black;
+  font-size: 0.8em;
+}
+
+#btn-form {
+  display: block;
+  background-color: green;
+  color: white;
+  font-family: "AmsiPro-Ultra";
+  font-size: 1.5em;
+  border: none;
+  border-radius: 30px;
+  padding: 1px 50px;
+  margin: 5px auto;
+}
+
+ul {
+  columns: 2;
+}
+
+ul > li {
+  padding-bottom: 1px;
+}
+
+#obrigatorios {
+  text-align: center;
+  font-size: 0.7em;
+}
+
+@media only screen and (max-width: 600px) {
+  #form {
+    display: flex;
+    flex-flow: column wrap;
+  }
+  div#texto-periferico {
+    text-align: center;
+    margin: auto;
+  }
+
+  div#texto-periferico > h1 {
+    text-align: center;
+    font-size: 2.2em;
+    margin: auto;
+  }
+
+  div#texto-periferico > h2 {
+    text-align: center;
+    font-size: 1.6em;
+    padding-bottom: 20px;
+    margin: auto;
+  }
+
+  #formulario {
+    width: 100%;
+    margin: auto;
+  }
+}
 footer {
-  background-color: rgb(0, 127, 44);
+  background-color: rgb(20, 135, 62);
 }
 
 footer > p {
   margin: auto;
   padding: 10px 0px 30px 0px;
-  width: 790px;
+  max-width: 790px;
+  min-width: 350px;
   text-align: center;
   color: white;
-  font-size: 0.7em;
+  font-size: 0.8em;
+}
+
+@media only screen and (max-width: 600px) {
+  footer {
+    min-width: 350px;
+  }
 }
