@@ -19,45 +19,59 @@
   font-family: "AmsiProCond-SemiBold";
   src: url(../fontes/AmsiPro/AmsiPro-SemiBoldCondensed.otf);
 }
+
+:root {
+  --fontePadrao: "AmsiProNarw-Ultra";
+  --fonteTitleBtnForm: "AmsiPro-Ultra";
+  --fonteSecundaria: "AmsiProNarw-Regular";
+  --fonteIcones: "AmsiProCond-SemiBold";
+
+  --corBtn: rgb(0, 127, 44);
+  --corDestaqTxtCentro: rgb(107, 99, 72);
+  --corUaiRango: rgb(201, 59, 8);
+  --corDestaqPerifericos: rgb(255, 204, 0);
+  --corAsideETitlePerifForm: rgb(51, 51, 51);
+  --corFooter: rgb(20, 135, 62);
+  --corFundoSectionForm: rgb(195, 186, 154);
+}
 * {
   padding: 0px;
   margin: 0px;
-}
-
-#fundo-cabecalho {
-  background-color: rgb(255, 59, 0);
-  position: relative;
-  height: 50px;
-}
-
-#cabecalho {
-  height: 50px;
-  position: absolute;
-  left: 25%;
 }
 
 body {
   background-color: rgb(233, 226, 216);
 }
 
+.caixaTopo {
+  position: relative;
+}
+
+.caixaImgTopo {
+  background-image: url(../imagens/fundo_topo.png);
+  height: 1470px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .imgTopo {
   width: 100%;
 }
 
 .conteudoTopo {
-  font-family: "AmsiProNarw-Ultra";
+  font-family: var(--fontePadrao);
   color: white;
-  font-size: 3.2em;
+  font-size: 4em;
   line-height: 1.2em;
   position: absolute;
-  left: 250px;
-  top: 250px;
+  left: 400px;
+  top: 243px;
 }
 
 main {
   height: 100%;
   max-width: 800px;
-  min-width: 250px;
+  min-width: 320px;
   margin: auto;
   margin-top: -100px;
   padding-top: 200px;
@@ -65,21 +79,21 @@ main {
   background-color: white;
 }
 
-.btn-saiba-mais {
-  font-family: "AmsiProNarw-Ultra";
-  font-size: 0.4em;
+.btnSaibaMais {
+  font-family: var(--fontePadrao);
+  font-size: 0.6em;
   display: block;
-  background-color: rgb(20, 135, 62);
+  background-color: var(--corBtn);
   color: white;
   border: none;
   border-radius: 40px;
-  padding: 3px 40px;
+  padding: 0px 79px;
   margin-top: 10px;
 }
 
 .automarax {
   position: absolute;
-  bottom: -500px;
+  bottom: -50px;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -90,32 +104,33 @@ main {
   box-shadow: 4px 3px 15px rgba(0, 0, 0, 0.479);
 }
 
-#coberturas-abrang > h1 {
-  color: rgb(107, 99, 72);
-  font-family: "AmsiProNarw-Ultra";
+.coberturasAbrang > h1 {
+  color: var(--corDestaqTxtCentro);
+  font-family: var(--fontePadrao);
   text-align: center;
   font-size: 3em;
 }
 
-#coberturas-abrang > h2 {
+.coberturasAbrang > h2 {
   color: rgb(63, 63, 65);
-  font-family: "AmsiProNarw-Ultra";
+  font-family: var(--fontePadrao);
   text-align: center;
+  font-size: 1.8em;
 }
 
-p#paragrafo-centro {
+.paragrafoCentro {
   color: rgb(63, 63, 65);
-  font-family: "AmsiProNarw-Regular";
+  font-family: var(--fonteSecundaria);
   text-align: center;
   font-size: 1.7em;
   padding: 20px;
 }
 
-p#paragrafo-centro > span {
-  color: rgb(107, 99, 72);
+.paragrafoCentro > span {
+  color: var(--corDestaqTxtCentro);
 }
 
-#icones {
+.caixaIcones {
   padding-bottom: 30px;
   margin: auto;
   text-align: center;
@@ -123,7 +138,7 @@ p#paragrafo-centro > span {
   flex-flow: row wrap;
 }
 
-.imagem-icone {
+.imagemIcone {
   width: 160px;
   height: 160px;
   padding: 20px 0px 10px 0px;
@@ -136,224 +151,238 @@ p#paragrafo-centro > span {
 
 .icone p {
   text-align: center;
-  font-family: "AmsiProCond-SemiBold";
-  color: rgb(107, 99, 72);
+  font-family: var(--fonteIcones);
+  color: var(--corDestaqTxtCentro);
 }
 
-@media only screen and (max-width: 600px) {
-  .imagem-icone {
-    width: 150px;
-    height: 150px;
-    padding: 20px 0px 10px 0px;
-  }
-
-  .icone p {
-    text-align: center;
-    font-size: 1em;
-  }
-
-  .icone {
-    width: 50%;
-  }
-}
-
-section.especial {
+.caixaEspecial {
   display: flex;
   flex-flow: row wrap;
-  background-color: rgb(201, 59, 8);
+  background-color: var(--corUaiRango);
   border-radius: 30px;
   padding: 10px;
   margin: 10px 10px 0px 10px;
 }
 
-.div-especial-img {
-  width: 40%;
-}
-
-.div-especial-texto {
+.caixaTxtEspecial {
   width: 60%;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
 }
 
-.div-especial-texto h1 {
+.caixaTxtEspecial h1 {
   text-align: justify;
-  color: rgb(255, 204, 0);
-  font-family: "AmsiProNarw-Ultra";
+  color: var(--corDestaqPerifericos);
+  font-family: var(--fontePadrao);
   font-size: 3.2em;
   padding-top: 20px;
+  padding-left: 20px;
 }
 
-.div-especial-texto > p {
+.caixaTxtEspecial > p {
   color: white;
-  font-family: "AmsiProNarw-Ultra";
+  font-family: var(--fontePadrao);
   font-size: 1.6em;
   text-align: justify;
-  height: 50%;
+  padding-left: 20px;
 }
 
-.img-especial {
-  width: 250px;
-  height: 250px;
-  margin: 50px 30px;
-}
-
-@media only screen and (max-width: 600px) {
-  section.especial {
-    display: flex;
-    flex-flow: column wrap;
-  }
-  section.especial {
-    padding: 15px;
-  }
-
-  .img-especial {
-    max-width: 150px;
-    max-height: 150px;
-    margin: auto;
-  }
-
-  .div-especial-img {
-    margin: auto;
-  }
-
-  .div-especial-texto {
-    width: 100%;
-    padding: 5px;
-  }
-
-  .div-especial-texto > p {
-    font-size: 1.2em;
-    margin: auto;
-    text-align: center;
-  }
-
-  .div-especial-texto > h1 {
-    font-size: 2.8em;
-    margin: auto;
-    text-align: center;
-  }
+.imgEspecial {
+  width: 40%;
+  margin: 40px 0px;
 }
 
 aside {
-  background-color: rgb(51, 51, 51);
+  background-color: var(--corAsideETitlePerifForm);
+  width: 100%;
 }
 
-#bloco-assistencia {
+.blocoAssistencia {
   display: flex;
   flex-flow: row wrap;
-  max-width: 800px;
+  width: 730px;
   margin: auto;
-  padding: 40px 0px;
+  padding: 20px 0px;
 }
 
-div#texto-assistencia {
-  max-width: 50%;
+.textoAssistencia {
+  width: 45%;
+  margin: 0 auto;
 }
 
-div#texto-assistencia > h1 {
+.textoAssistencia > h1 {
   text-align: justify;
-  color: rgb(255, 204, 0);
-  font-family: "AmsiProNarw-Ultra";
+  color: var(--corDestaqPerifericos);
+  font-family: var(--fontePadrao);
   font-size: 3.2em;
+  margin: auto 0;
 }
 
-div#texto-assistencia > p {
+.textoAssistencia > p {
   color: white;
-  font-family: "AmsiProNarw-Ultra";
+  font-family: var(--fontePadrao);
   font-size: 1.6em;
   text-align: justify;
 }
 
-div#img-carrossel {
-  width: 50%;
+.slider {
+  margin: 0 auto;
+  width: 330px;
+  height: 330px;
+  overflow: hidden;
 }
 
-img.carrossel {
-  width: 250px;
-  height: 250px;
-  display: block;
-  margin: auto;
+.slides {
+  width: 400%;
+  height: 300px;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 25%;
+  position: relative;
+  transition: 1s;
+}
+
+.slide img {
+  width: 330px;
+}
+
+.navigationManual {
+  position: absolute;
+  width: 330px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manualBtn {
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manualBtn:not(:last-child) {
+  margin-right: 40px;
+}
+
+.manualBtn:hover {
+  background-color: white;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -25%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -50%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -75%;
+}
+
+#radio5:checked ~ .first {
+  margin-left: -100%;
+}
+
+.navigationAuto div {
+  border: 2px solid #20a6ff;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.navigationAuto {
+  position: absolute;
+  width: 330px;
+  margin-top: 260px;
+  display: flex;
+  justify-content: center;
+}
+
+.navigationAuto div:not(:last-child) {
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigationAuto .autoBtn1 {
+  background-color: white;
+}
+
+#radio2:checked ~ .navigationAuto .autoBtn2 {
+  background-color: white;
+}
+
+#radio3:checked ~ .navigationAuto .autoBtn3 {
+  background-color: white;
+}
+
+#radio4:checked ~ .navigationAuto .autoBtn4 {
+  background-color: white;
+}
+
+#radio5:checked ~ .navigationAuto .autoBtn5 {
+  background-color: white;
+}
+
+.slider {
+  width: 45%;
 }
 
 .borda {
   width: 100%;
 }
 
-@media only screen and (max-width: 600px) {
-  aside {
-    min-width: 350px;
-    max-width: 800px;
-  }
-  #bloco-assistencia {
-    min-width: 350px;
-    display: flex;
-    flex-flow: column wrap;
-    width: 800px;
-    margin: auto;
-  }
-
-  div#texto-assistencia {
-    margin: auto;
-  }
-
-  div#texto-assistencia > h1 {
-    width: 300px;
-    text-align: center;
-  }
-
-  div#texto-assistencia > p {
-    font-size: 1.3em;
-    width: 300px;
-    text-align: center;
-  }
-  .borda {
-    width: 100%;
-  }
-  #img-carrossel {
-    margin: auto;
-  }
-}
-
-section#form {
-  background-color: rgb(195, 186, 154);
+.caixaForm {
+  background-color: var(--corFundoSectionForm);
   display: flex;
   flex-flow: row wrap;
   max-width: 800px;
-  min-width: 350px;
+  min-width: 290px;
   margin: auto;
   padding: 20px;
 }
 
-div#texto-periferico {
+.formTextoPeriferico {
   width: 50%;
   margin: auto;
 }
 
-div#texto-periferico > h1 {
-  color: rgb(51, 51, 51);
-  font-family: "AmsiProNarw-Ultra";
+.formTextoPeriferico > h1 {
+  color: var(--corAsideETitlePerifForm);
+  font-family: var(--fontePadrao);
   font-size: 3em;
 }
 
-div#texto-periferico > h2 {
+.formTextoPeriferico > h2 {
   color: white;
-  font-family: "AmsiProNarw-Ultra";
-  font-size: 1.5em;
+  font-family: var(--fontePadrao);
+  font-size: 1.7em;
 }
 
-form#formulario {
+.formulario {
   width: 40%;
-  border: 1px solid rgb(255, 59, 0);
+  border: 1px solid var(--corUaiRango);
   border-radius: 10px;
   background-color: rgb(246, 243, 234);
   padding: 10px;
 }
 
-form#formulario > h1 {
-  font-family: "AmsiProNarw-Ultra";
+.formulario > h1 {
+  font-family: var(--fonteTitleBtnForm);
   font-size: 1.5em;
-  color: rgb(255, 59, 0);
+  color: var(--corUaiRango);
   text-align: center;
 }
 
@@ -363,22 +392,29 @@ input.campo {
   margin-bottom: 10px;
 }
 
-form#formulario label {
+select.campo {
+  width: 101%;
+  height: 24px;
+  margin-bottom: 10px;
+}
+
+.formulario label {
   color: black;
   font-size: 0.7em;
-  font-family: "AmsiProNarw-Regular";
+  font-family: var(--fonteSecundaria);
 }
 
-#msg-checkbox {
+.msgCheckbox {
   color: black;
   font-size: 0.8em;
+  padding-bottom: 5px;
 }
 
-#btn-form {
+.btnForm {
   display: block;
-  background-color: green;
+  background-color: var(--corFooter);
   color: white;
-  font-family: "AmsiPro-Ultra";
+  font-family: var(--fonteTitleBtnForm);
   font-size: 1.5em;
   border: none;
   border-radius: 30px;
@@ -391,58 +427,441 @@ ul {
 }
 
 ul > li {
-  padding-bottom: 1px;
+  padding-bottom: 4px;
 }
 
-#obrigatorios {
+.obrigatorios {
   text-align: center;
   font-size: 0.7em;
 }
 
-@media only screen and (max-width: 600px) {
-  #form {
-    display: flex;
-    flex-flow: column wrap;
-  }
-  div#texto-periferico {
-    text-align: center;
-    margin: auto;
-  }
-
-  div#texto-periferico > h1 {
-    text-align: center;
-    font-size: 2.2em;
-    margin: auto;
-  }
-
-  div#texto-periferico > h2 {
-    text-align: center;
-    font-size: 1.6em;
-    padding-bottom: 20px;
-    margin: auto;
-  }
-
-  #formulario {
-    width: 100%;
-    margin: auto;
-  }
-}
 footer {
-  background-color: rgb(20, 135, 62);
+  background-color: var(--corFooter);
+  margin: auto;
 }
 
 footer > p {
   margin: auto;
   padding: 10px 0px 30px 0px;
   max-width: 790px;
-  min-width: 350px;
+  min-width: 290px;
   text-align: center;
   color: white;
   font-size: 0.8em;
 }
+@media only screen and (max-width: 1200px) {
+  .conteudoTopo {
+    font-size: 4em;
+    left: 138px;
+    top: 146px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .caixaImgTopo {
+    height: 800px;
+  }
+
+  .automarax {
+    bottom: -36px;
+    width: 300px;
+    height: 300px;
+  }
+
+  .conteudoTopo {
+    font-size: 3em;
+    left: 72px;
+    top: 74px;
+  }
+
+  .btnSaibaMais {
+    padding: 3px 22px;
+    font-size: 0.6em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    margin-top: -160px;
+  }
+
+  .caixaImgTopo {
+    height: 600px;
+  }
+
+  .automarax {
+    bottom: -36px;
+    width: 250px;
+    height: 250px;
+  }
+
+  .conteudoTopo {
+    font-size: 2em;
+    left: 72px;
+    top: 74px;
+  }
+
+  .btnSaibaMais {
+    padding: 3px 22px;
+    font-size: 0.8em;
+  }
+
+  .coberturasAbrang > h1 {
+    font-size: 2.5em;
+  }
+
+  .coberturasAbrang > h2 {
+    font-size: 1.3em;
+  }
+
+  .paragrafoCentro {
+    font-size: 1.4em;
+  }
+
+  .imagemIcone {
+    width: 200px;
+    height: 200px;
+  }
+
+  .icone {
+    width: 50%;
+  }
+
+  .icone p {
+    font-size: 1.5em;
+  }
+
+  .caixaEspecial {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px;
+  }
+
+  .caixaTxtEspecial {
+    width: 46%;
+    display: flex;
+    flex-flow: column wrap;
+    margin: auto;
+  }
+
+  .caixaTxtEspecial h1 {
+    text-align: center;
+    font-size: 2.5em;
+    text-align: justify;
+    padding: unset;
+  }
+
+  .caixaTxtEspecial > p {
+    font-size: 1.1em;
+    text-align: left;
+    padding: unset;
+  }
+
+  .imgEspecial {
+    width: 50%;
+    margin: auto;
+  }
+
+  aside {
+    width: 100%;
+  }
+
+  .blocoAssistencia {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    margin: auto;
+  }
+
+  .textoAssistencia {
+    width: 45%;
+    margin: auto;
+  }
+
+  .textoAssistencia > h1 {
+    text-align: justify;
+    font-size: 2.5em;
+  }
+
+  .textoAssistencia > p {
+    font-size: 1.2em;
+    text-align: left;
+    padding-bottom: 10px;
+  }
+
+  .slider {
+    margin: 0 auto;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+  }
+
+  .slides {
+    width: 400%;
+    height: 250px;
+    display: flex;
+  }
+
+  .slides input {
+    display: none;
+  }
+
+  .slide {
+    width: 25%;
+    position: relative;
+  }
+
+  .slide img {
+    width: 250px;
+  }
+
+  .navigationManual {
+    position: absolute;
+    width: 250px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navigationAuto {
+    position: absolute;
+    width: 250px;
+    margin-top: 210px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .caixaForm {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 800px;
+    min-width: 290px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .formTextoPeriferico {
+    width: 50%;
+    margin: auto;
+  }
+
+  .formTextoPeriferico > h1 {
+    font-size: 3em;
+  }
+
+  .formTextoPeriferico > h2 {
+    font-size: 1.5em;
+  }
+
+  .formulario {
+    width: 40%;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .formulario > h1 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  #obrigatorios {
+    text-align: center;
+    font-size: 0.7em;
+  }
+
+  footer {
+    font-size: 0.6em;
+    padding: 0px 20px;
+  }
+}
 
 @media only screen and (max-width: 600px) {
+  main {
+    margin-top: -170px;
+  }
+
+  .caixaImgTopo {
+    height: 400px;
+  }
+
+  .automarax {
+    bottom: -15px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .conteudoTopo {
+    font-size: 1.4em;
+    left: 33px;
+    top: 18px;
+  }
+
+  .btnSaibaMais {
+    padding: 3px 22px;
+    font-size: 0.8em;
+  }
+
+  .coberturasAbrang {
+    padding: 10px;
+  }
+
+  .coberturasAbrang > h1 {
+    font-size: 2.5em;
+  }
+
+  .coberturasAbrang > h2 {
+    font-size: 1.3em;
+  }
+
+  .paragrafoCentro {
+    font-size: 1.4em;
+  }
+
+  .imagemIcone {
+    width: 120px;
+    height: 120px;
+  }
+
+  .icone {
+    width: 50%;
+  }
+
+  .icone p {
+    font-size: 1.5em;
+  }
+
+  .caixaEspecial {
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  .caixaTxtEspecial {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  .caixaTxtEspecial h1 {
+    text-align: center;
+    font-size: 1.8em;
+    padding-left: 0px;
+  }
+
+  .caixaTxtEspecial > p {
+    font-size: 0.9em;
+    text-align: center;
+    padding-left: 0px;
+  }
+
+  .imgEspecial {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+  }
+
+  aside {
+    width: 100%;
+  }
+
+  .blocoAssistencia {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    padding: 20px 0px;
+  }
+
+  .textoAssistencia {
+    margin: auto;
+    padding-left: unset;
+  }
+
+  .textoAssistencia > h1 {
+    text-align: center;
+    font-size: 1.8em;
+  }
+
+  .textoAssistencia > p {
+    font-size: 1em;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  .slider {
+    margin: 0 auto;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+  }
+
+  .slides {
+    width: 400%;
+    height: 250px;
+    display: flex;
+  }
+
+  .slide img {
+    width: 250px;
+  }
+
+  .navigationManual {
+    position: absolute;
+    width: 250px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navigationAuto {
+    position: absolute;
+    width: 250px;
+    margin-top: 210px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .caixaForm {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 0px;
+  }
+
+  .formTextoPeriferico {
+    display: flex;
+    flex-flow: column wrap;
+    margin: auto;
+    width: 100%;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+
+  .formTextoPeriferico > h1 {
+    text-align: center;
+    font-size: 1.6em;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .formTextoPeriferico > h2 {
+    text-align: center;
+    font-size: 1.2em;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .formulario {
+    width: 290px;
+    padding: 10px;
+    margin: auto auto 20px auto;
+  }
+
+  #obrigatorios {
+    text-align: center;
+    font-size: 0.7em;
+  }
+
   footer {
-    min-width: 350px;
+    font-size: 0.6em;
+    padding: 0px 20px;
   }
 }

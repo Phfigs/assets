@@ -8,17 +8,8 @@
     <link rel="stylesheet" href="style/style.css" />
   </head>
   <body>
-    <header>
-      <div id="fundo-cabecalho">
-        <img
-          id="cabecalho"
-          src="../assets/imagens/cabeçalho escrito.png"
-          alt="Cabeçalho"
-        />
-      </div>
-    </header>
-    <section class="fundoTopo">
-      <img class="imgTopo" src="imagens/fundo_topo.png" alt="Imagem topo" />
+    <section class="caixaTopo">
+      <div class="caixaImgTopo"></div>
       <div class="conteudoTopo">
         <p>
           Imprevistos fazem <br />
@@ -27,21 +18,22 @@
           existem alguns <br />
           riscos que você não <br />
           precisa correr!
-          <input class="btn-saiba-mais" type="button" value="SAIBA MAIS" />
+          <input class="btnSaibaMais" type="button" value="SAIBA MAIS" />
         </p>
       </div>
-      <div>
+      <div class="caixaAutomarax">
         <img class="automarax" src="imagens/logo-redonda.png" alt="automax" />
       </div>
     </section>
+
     <main>
-      <section id="coberturas-abrang">
+      <section class="coberturasAbrang">
         <h1>COBERTURAS ABRANGENTES</h1>
         <h2>
           Seguros sob medida para seu negócio: a proteção com melhor <br />
           custo-benefício para sua empresa!
         </h2>
-        <p id="paragrafo-centro">
+        <p class="paragrafoCentro">
           Pacotes personalizáveis especialmente planejados para atender as
           necessidades das empresas do setor de gastronomia, como <br />
           <span>
@@ -49,10 +41,10 @@
           </span>
         </p>
       </section>
-      <div id="icones">
+      <div class="caixaIcones">
         <div class="icone">
           <img
-            class="imagem-icone"
+            class="imagemIcone"
             src="imagens/icone_incendio.png"
             alt="Icone incêndio."
           />
@@ -64,7 +56,7 @@
         </div>
         <div class="icone">
           <img
-            class="imagem-icone"
+            class="imagemIcone"
             src="imagens/icone_danoseletricos.png"
             alt="Ícone danos elétricos."
           />
@@ -75,7 +67,7 @@
         </div>
         <div class="icone">
           <img
-            class="imagem-icone"
+            class="imagemIcone"
             src="imagens/icone_chuva.png"
             alt="Ícone chuva."
           />
@@ -87,7 +79,7 @@
         </div>
         <div class="icone">
           <img
-            class="imagem-icone"
+            class="imagemIcone"
             src="imagens/icone_dinheiro.png"
             alt="Ícone despesas financeiras."
           />
@@ -98,7 +90,7 @@
         </div>
         <div class="icone">
           <img
-            class="imagem-icone"
+            class="imagemIcone"
             src="imagens/icone_lampada.png"
             alt="Ícone anúncios luminosos."
           />
@@ -110,7 +102,7 @@
         </div>
         <div class="icone">
           <img
-            class="imagem-icone"
+            class="imagemIcone"
             src="imagens/icone_pessoas.png"
             alt="Ícone responsabilidade cívil."
           />
@@ -121,7 +113,7 @@
         </div>
         <div class="icone">
           <img
-            class="imagem-icone"
+            class="imagemIcone"
             src="imagens/icone_engrenagem.png"
             alt="Ícone avaria de máquinas."
           />
@@ -133,7 +125,7 @@
         </div>
         <div class="icone">
           <img
-            class="imagem-icone"
+            class="imagemIcone"
             src="imagens/icone_roubo.png"
             alt="Ícone furto e roubo."
           />
@@ -143,15 +135,13 @@
           </p>
         </div>
       </div>
-      <section class="especial">
-        <div class="div-especial-img">
-          <img
-            class="img-especial"
-            src="imagens/imagem_avisorestaurante.png"
-            alt="Imagem Frango Assado"
-          />
-        </div>
-        <div class="div-especial-texto">
+      <section class="caixaEspecial">
+        <img
+          class="imgEspecial"
+          src="imagens/imagem_avisorestaurante.png"
+          alt="Imagem Frango Assado"
+        />
+        <div class="caixaTxtEspecial">
           <h1>
             ESPECIAL PARA <br />
             RESTAURANTES
@@ -167,8 +157,8 @@
     </main>
     <aside>
       <img class="borda" src="imagens/borda.png" alt="borda" />
-      <section id="bloco-assistencia">
-        <div id="texto-assistencia">
+      <section class="blocoAssistencia">
+        <div class="textoAssistencia">
           <h1>
             ASSISTÊNCIA <br />
             24 HORAS
@@ -178,32 +168,64 @@
             sem a ocorrência de sinistro
           </p>
         </div>
-        <div id="img-carrossel">
-          <img
-            class="carrossel"
-            src="imagens/imagem1_carrossel.png"
-            alt="Imagem eletricista"
-          />
+        <div class="slider">
+          <div class="slides">
+            <input type="radio" name="slide" id="radio1" />
+            <input type="radio" name="slide" id="radio2" />
+            <input type="radio" name="slide" id="radio3" />
+            <input type="radio" name="slide" id="radio4" />
+            <input type="radio" name="slide" id="radio5" />
+
+            <div class="slide first">
+              <img src="imagens/imagem1_carrossel.png" />
+            </div>
+
+            <div class="slide">
+              <img src="imagens/imagem2_carrossel.png" />
+            </div>
+
+            <div class="slide">
+              <img src="imagens/imagem3_carrossel.png" />
+            </div>
+
+            <div class="slide">
+              <img src="imagens/imagem4_carrossel.png" />
+            </div>
+
+            <div class="slide">
+              <img src="imagens/imagem5_carrossel.png" />
+            </div>
+
+            <div class="navigationAuto">
+              <div class="autoBtn1"></div>
+              <div class="autoBtn2"></div>
+              <div class="autoBtn3"></div>
+              <div class="autoBtn4"></div>
+              <div class="autoBtn5"></div>
+            </div>
+          </div>
+
+          <div class="navigationManual">
+            <label for="radio1" class="manualBtn"></label>
+            <label for="radio2" class="manualBtn"></label>
+            <label for="radio3" class="manualBtn"></label>
+            <label for="radio4" class="manualBtn"></label>
+            <label for="radio5" class="manualBtn"></label>
+          </div>
         </div>
       </section>
+
       <img class="borda" src="imagens/borda.png" alt="borda" />
     </aside>
-    <section id="form">
-      <div id="texto-periferico">
-        <h1>
-          OPÇÕES PARA <br />
-          SEGURO <br />
-          PESSOAL E <br />
-          AUTOMOTIVO
-        </h1>
+    <section class="caixaForm">
+      <div class="formTextoPeriferico">
+        <h1>OPÇÕES PARA SEGURO PESSOAL E AUTOMOTIVO</h1>
         <h2>
-          Cuide também da sua vida <br />
-          pessoal: a Automarax oferece <br />
-          planos voltados para suas <br />
-          necessidades pessoais. Consulte!
+          Cuide também da sua vida pessoal: a Automarax oferece planos voltados
+          para suas necessidades pessoais. Consulte!
         </h2>
       </div>
-      <form id="formulario" action="">
+      <form class="formulario" action="">
         <h1>
           Receba a apresentação <br />
           completa de proposta
@@ -211,12 +233,12 @@
         <label for="responsavel">Responsável*</label>
         <input class="campo" type="text" name="responsavel" id="responsavel" />
 
-        <label for="cnpj-estabelecimento">CNPJ do estabelecimento*</label>
+        <label for="cnpjEstabelecimento">CNPJ do estabelecimento*</label>
         <input
           class="campo"
           type="text"
-          name="cnpj-estabelecimento"
-          id="cnpj-estabelecimento"
+          name="cnpjEstabelecimento"
+          id="cnpjEstabelecimento"
         />
 
         <label for="telefone">Telefone de contato*</label>
@@ -226,17 +248,20 @@
         <input class="campo" type="text" name="email" id="email" />
 
         <label for="cidade">Cidade*</label>
-        <input class="campo" type="text" name="cidade" id="cidade" />
+        <select class="campo" name="cidade" id="cidade">
+          <option value=""></option>
+        </select>
 
-        <label for="tp-estabelecimento">Tipo de estabelecimento*</label>
-        <input
+        <label for="tipoEstabelecimento">Tipo de estabelecimento*</label>
+        <select
           class="campo"
-          type="text"
-          name="tp-estabelecimento"
-          id="tp-estabelecimento"
-        />
+          name="tipoEstabelecimento"
+          id="tipoEstabelecimento"
+        >
+          <option value=""></option>
+        </select>
 
-        <p id="msg-checkbox">
+        <p class="msgCheckbox">
           Escolha pelo menos uma das opções de interesse a seguir*
         </p>
 
@@ -245,7 +270,7 @@
             <input
               class="checkbox"
               type="checkbox"
-              name="incendio"
+              name="opcoesDeInteresse"
               id="incendio"
             />
             <label for="incendio">Incêndio, raio ou explosões</label>
@@ -255,7 +280,7 @@
             <input
               class="checkbox"
               type="checkbox"
-              name="danos-eletricos"
+              name="opcoesDeInteresse"
               id="danos-eletricos"
             />
             <label for="danos-eletricos">Danos elétricos</label>
@@ -265,7 +290,7 @@
             <input
               class="checkbox"
               type="checkbox"
-              name="vendaval"
+              name="opcoesDeInteresse"
               id="vendaval"
             />
             <label for="vendaval">Vendaval e granizo</label>
@@ -275,14 +300,19 @@
             <input
               class="checkbox"
               type="checkbox"
-              name="despesas-fixas"
+              name="opcoesDeInteresse"
               id="despesas-fixas"
             />
             <label for="despesas-fixas">Despesas fixas</label>
           </li>
 
           <li>
-            <input class="checkbox" type="checkbox" name="auto" id="auto" />
+            <input
+              class="checkbox"
+              type="checkbox"
+              name="opcoesDeInteresse"
+              id="auto"
+            />
             <label for="auto">Auto</label>
           </li>
 
@@ -290,7 +320,7 @@
             <input
               class="checkbox"
               type="checkbox"
-              name="quebra-vidros"
+              name="opcoesDeInteresse"
               id="quebra-vidros"
             />
             <label for="quebra-vidros">Quebra de vidros e luminárias</label>
@@ -300,7 +330,7 @@
             <input
               class="checkbox"
               type="checkbox"
-              name="responsabilidade-civil"
+              name="opcoesDeInteresse"
               id="responsabilidade-civil"
             />
             <label for="responsabilidade-civil">Responsabilidade civil</label>
@@ -310,7 +340,7 @@
             <input
               class="checkbox"
               type="checkbox"
-              name="avaria-maquinas"
+              name="opcoesDeInteresse"
               id="avaria-maquinas"
             />
             <label for="avaria-maquinas">Avaria de máquinas</label>
@@ -320,7 +350,7 @@
             <input
               class="checkbox"
               type="checkbox"
-              name="furto-roubo"
+              name="opcoesDeInteresse"
               id="furto-roubo"
             />
             <label for="furto-roubo">Furto e Roubo</label>
@@ -330,15 +360,15 @@
             <input
               class="checkbox"
               type="checkbox"
-              name="seguro-pessoal"
+              name="opcoesDeInteresse"
               id="seguro-pessoal"
             />
             <label for="seguro-pessoal">Seguro pessoal</label>
           </li>
         </ul>
 
-        <button id="btn-form" type="submit">ENVIAR</button>
-        <p id="obrigatorios">Obrigatório*</p>
+        <button class="btnForm" type="submit">ENVIAR</button>
+        <p class="obrigatorios">Obrigatório*</p>
       </form>
     </section>
     <footer>
@@ -354,5 +384,6 @@
         motivadamente.
       </p>
     </footer>
+    <script src="script/script.js"></script>
   </body>
 </html>
